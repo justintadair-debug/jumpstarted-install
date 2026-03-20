@@ -4,14 +4,14 @@
 # Downloads and installs JUMPSTARTED with one command
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/justintadair-debug/operator/main/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/justintadair-debug/jumpstarted-install/main/bootstrap.sh | bash
 #
 
 set -e
 
 # Configuration
 VERSION="1.6.0"
-GITHUB_REPO="justintadair-debug/operator"
+GITHUB_REPO="justintadair-debug/jumpstarted-install"
 DOWNLOAD_URL="https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/OPERATOR-${VERSION}.tar.gz"
 TEMP_DIR=$(mktemp -d)
 
