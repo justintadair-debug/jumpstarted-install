@@ -10,7 +10,7 @@
 set -e
 
 # Configuration
-VERSION="1.6.0"
+VERSION="1.7.0"
 GITHUB_REPO="justintadair-debug/jumpstarted-install"
 DOWNLOAD_URL="https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/OPERATOR-${VERSION}.tar.gz"
 TEMP_DIR=$(mktemp -d)
