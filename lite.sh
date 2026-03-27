@@ -55,7 +55,7 @@ if ! command -v brew &> /dev/null; then
     echo -e "${YELLOW}⚠️  Homebrew is not installed.${NC}"
     echo "First-time setup will take 5-10 minutes."
     echo ""
-    read -p "Continue? [Y/n]: " CONTINUE < /dev/tty
+    read -p "Continue? [Y/n]: " CONTINUE
     if [[ "$CONTINUE" =~ ^[Nn]$ ]]; then
         echo "Setup cancelled."
         exit 0
@@ -153,7 +153,7 @@ echo ""
 # ============================================================================
 
 echo -e "${YELLOW}Paste your Discord bot token (from Developer Portal):${NC}"
-read -s BOT_TOKEN < /dev/tty
+read -s BOT_TOKEN
 echo ""
 
 if [[ -z "$BOT_TOKEN" ]]; then
@@ -163,7 +163,7 @@ fi
 
 if [[ ${#BOT_TOKEN} -lt 70 ]]; then
     echo -e "${YELLOW}⚠️  That token looks short (${#BOT_TOKEN} chars). Bot tokens are usually 70+ characters.${NC}"
-    read -p "Continue anyway? [y/N]: " CONTINUE < /dev/tty
+    read -p "Continue anyway? [y/N]: " CONTINUE
     if [[ ! "$CONTINUE" =~ ^[Yy]$ ]]; then
         echo "Setup cancelled. Get your token from discord.com/developers"
         exit 1
@@ -178,7 +178,7 @@ echo ""
 # ============================================================================
 
 echo -e "${YELLOW}Paste your Discord channel ID:${NC}"
-read CHANNEL_ID < /dev/tty
+read CHANNEL_ID
 echo ""
 
 if [[ -z "$CHANNEL_ID" ]]; then
@@ -204,7 +204,7 @@ echo "To find it:"
 echo "  1. Discord Settings > Advanced > Enable Developer Mode"
 echo "  2. Right-click your username > Copy User ID"
 echo ""
-read USER_ID < /dev/tty
+read USER_ID
 
 if [[ -z "$USER_ID" ]]; then
     echo -e "${RED}User ID is required for safety. Your bot will only respond to you.${NC}"
